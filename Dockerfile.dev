@@ -1,0 +1,7 @@
+FROM node:14
+WORKDIR /my_react_app
+COPY package.json /my_react_app
+RUN yarn install
+COPY . /my_react_app
+EXPOSE 3100
+CMD ["yarn", "start"]
